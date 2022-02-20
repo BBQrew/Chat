@@ -9,7 +9,6 @@ public class ChatHubs : Hub
     //Login: verbindung zum Server
     public override async Task OnConnectedAsync()
     {
-    https://localhost:7268/
         string username = Context.GetHttpContext().Request.Query["username"];
         Users.Add(Context.ConnectionId, username);
         await AddMessageToChat(string.Empty, $"{username} joined the party!");
